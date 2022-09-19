@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import './Term.css'
 import { help, socials, whois, projects } from '../commands'
 
-
 const Term = () => {
     const [input, setInput] = useState('')
     const [output, setOutput] = useState('')
@@ -10,18 +9,6 @@ const Term = () => {
 
     useEffect(() => {
         inputRef.current.focus()
-    }, [])
-
-    //USE EFFECT to listen for key press and play typing sound effect
-    useEffect(() => {
-        const handleKeyPress = () => {
-            const audio = new Audio('../../sounds/typing.mp3')
-            audio.play()
-        }
-        document.addEventListener('keypress', handleKeyPress)
-        return () => {
-            document.removeEventListener('keypress', handleKeyPress)
-        }
     }, [])
 
     const onKeyDown = (e) => {
@@ -106,13 +93,12 @@ const Term = () => {
         let output = ''
 
         arr.map((line, i) => {
+
             setTimeout(() => {
-                // command += line + '\n'
-                // setOutput(command)
                 return (
-                    <div>
-                    {command += line + '\n'}
-                        {setOutput(command)}
+                    <div key={i} className='typewriter'>
+                        {command += line + '\n'}
+                        <p>{setOutput(command)}</p>
                     </div>
                 )
             }, 200 * i)
@@ -137,18 +123,18 @@ const Term = () => {
         </div>
         <div className="term__input">
             <div className="output">
-                {output}
+                <span className='type'>{output}</span>
             </div>
             <div className="input">
             <label className='term__user_label'>user@local.com:~$</label>
-                <input
-                className='terminal__input'
-                ref={inputRef}
-                type={'text'}
-                value={input}
-                onChange={onChange}
-                onKeyDown={onKeyDown}
-                />
+                    <input
+                        className='terminal__input'
+                        ref={inputRef}
+                        type={'text'}
+                        value={input}
+                        onChange={onChange}
+                        onKeyDown={onKeyDown}
+                    />
             </div>
         </div>
     </div>

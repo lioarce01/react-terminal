@@ -2,11 +2,11 @@
 
 const help = [
     // encerrar cada string con tags de html para darle estilo a la terminal y que se vea como un comando
-    '> help      -     Type help for more information.',
-    '> whois     -     Who I am?',
-    '> socials   -     Show socials links.',
-    '> repo      -     Show this repository.',
-    '> clear     -     Clear the terminal screen.',
+    '> `whois`     -     Who I am?',
+    '> `repo`      -     Show this repository.',
+    '> `socials`   -     Show socials links.',
+    '> `clear`     -     Clear the terminal screen.',
+    '> `help`      -     Type help for more information.',
   ];
 
 const socials = [
