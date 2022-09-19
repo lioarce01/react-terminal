@@ -65,7 +65,7 @@ input {
 }
 
 .term__user_label {
-    animation: blink 0.7s ease-in-out infinite alternate;
+    animation: blink 1s ease-in-out infinite alternate;
 }
 
 .help {
@@ -86,12 +86,3 @@ input {
         opacity: 0;
     }
 }
-
-.term__cursor::after {
-    content: '';
-    position: absolute;
-    width: 0.5rem;
-    height: 0.8rem;
-    background-color: rgb(117, 117, 117)
-}
-

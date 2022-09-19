@@ -66,7 +66,7 @@ const Term = () => {
                 {output}
             </div>
             <div className="input">
-            <label className='term__user_label'>user@local:~ #</label>
+            <label className='term__user_label'>user@local:~ $</label>
             <input
                 className='term__cursor'
                 ref={inputRef}
