@@ -2,8 +2,9 @@
     border: 1px solid rgb(41, 41, 48);
     border-radius: 5px;
     background-color: rgb(41, 41, 48);
-    color: rgb(180, 180, 180);
-    font-size: 14px;
+    color: rgb(211, 211, 211);
+    font-size: 1rem;
+    font-weight: 300;
     width: 70vw;
     height: 90vh;
     overflow: auto;
@@ -12,7 +13,6 @@
     align-items: flex-start;
     margin: 0 auto;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
-    text-shadow: 0 0 1px rgb(180, 180, 180);
 }
 
 .terminal_container {

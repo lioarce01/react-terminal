@@ -1,47 +1,30 @@
 //COMANDOS PARA LA TERMINAL
 
-const commands = {
-    'help': {
-        description: 'type `commands` to list available commands.\n',
+const help = [
+    // encerrar cada string con tags de html para darle estilo a la terminal y que se vea como un comando
+    '> help      -     Type help for more information.',
+    '> whois     -     Who I am?',
+    '> socials   -     Show socials links.',
+    '> repo      -     Show this repository.',
+    '> clear     -     Clear the terminal screen.',
+  ];
 
-    },
-    'clear': {
-        description: `clears the terminal screen.\n`,
-        fn: () => {
-            return '';
-        }
-    },
-    'linkedin': {
-        description: `opens linkedin profile.\n`,
-        fn: () => {
-            window.open('https://www.linkedin.com/in/lionel-arce/', '_blank', 'noopener,noreferrer');
-            return '';
-        }
-    },
-    'github': {
-        description: `opens github profile.\n`,
-        fn: () => {
-            window.open('https://github.com/lioarce01', '_blank', 'noopener,noreferrer');
-            return '';
-        }
-    },
-    'whois': {
-        description: `who I am?\n`,
-        fn: () => {
-            window.open('https://lionelarce-portfolio.vercel.app', '_blank', 'noopener,noreferrer');
-            return '';
-        }
-    },
-    'commands': {
-        description: `lists available commands.\n`,
-        fn: () => {
-            // return all available commands with descriptions
-            return Object.keys(commands).map(command => {
-                return `> ${command} - ${commands[command].description}`;
-            }).join(''); // join all commands into a single string
+const socials = [
+    'Type `linkedin` for my linkedin profile',
+    'Type `github` for my github profile',
+  ];
 
-        }
-    },
-}
+const whois = [
+    "Hi, I'm Lionel Arce.",
+    'I am a fullstack developer.',
+    'Based in Buenos Aires, Argentina.',
+    'I am a student of Henry Bootcamp.',
+    'I am a lover of technology.',
+    'I am a lover of music.',
+]
 
-export default commands;
+const projects = [
+    'Type `portfolio` to open my portfolio.',
+]
+
+export { help, socials, whois, projects };

@@ -49,3 +49,9 @@
     text-align: center;
     color: rgb(153, 153, 153);
 }
+
+.title {
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0 1px rgb(247, 247, 247);
+}

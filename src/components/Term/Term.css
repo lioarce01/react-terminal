@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    overflow-y: hidden;
     font-size: 11px;
 }
 
@@ -12,20 +11,18 @@ input {
     outline: none;
     padding: 0;
     margin: 0;
-    font-size: 11px;
+    font-size: 1rem;
     font-family: 'Inconsolata', monospace;
     background-color: transparent;
-    color: rgb(179, 179, 179);
+    color: rgb(199, 198, 198);
     margin-left: 0.5rem;
-    width: 20vh;
+    width: 300%;
     text-decoration: none;
-    font-weight: 400;
-    text-shadow: 0 0 1px rgb(179, 179, 179);
+    font-weight: 300;
     letter-spacing: 0.1rem;
-   
 }
 
-.typewriter {
+.output {
     white-space: pre-line !important;
     margin-top: 2rem;
     height: 100%;
@@ -34,13 +31,15 @@ input {
     box-sizing: border-box; 
     line-height: 2;
     letter-spacing: 0.1rem;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
 }
 
 .term__header {
     display: flex;
     flex-direction: column;
     line-height: 0.1;
-    font-size: 11px;
+    font-size: 1rem;
     margin-top: 0.5rem;
     letter-spacing: 0.05rem;
 }
@@ -59,30 +58,36 @@ input {
 
 .term__user_label {
     color: rgb(209, 37, 37);
-    font-size: 12px;
-    font-weight: bold;
-    text-shadow: 0 0 2px rgb(209, 37, 37);
+    font-size: 1rem;
+    font-weight: 400;
+    text-shadow: 0 0 3px rgb(209, 37, 37);
 }
 
-.term__user_label {
-    animation: blink 1s ease-in-out infinite alternate;
+/* focus label when scrolling */
+
+.term__user_label:focus {
+    outline: none;
+    text-shadow: 0 0 3px rgb(209, 37, 37);
 }
 
 .help {
-    color: rgb(209, 37, 37);
-    text-shadow: 0 0 2px rgb(209, 37, 37);
+    color: rgb(177, 177, 177);
+    text-shadow: 0 0 1px rgb(255, 255, 255);
+    font-weight: 400;
 }
 
-/* cursor animation blink */
-
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(70, 70, 70, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+    box-shadow: inset 0 0 6px rgba(70, 70, 70, 0.3);
 }
